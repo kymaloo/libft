@@ -12,20 +12,26 @@
 
 #include "libft.h"
 
-int atoi(const char *str)
+int	ft_atoi(char *str)
 {
-    int nb;
-    
-    while ((9 <= *str && *str <= 13) || *str == ' ')
+	int	sign;
+	int	nb;
+
+	sign = 1;
+	nb = 0;
+	while (*str == 32 || (*str >= 9 && *str <= 13))
+		str++;
+	if ((*str == '-') || (*str == '+'))
 	{
+		if (*str == '-')
+			sign *= -1;
 		str++;
 	}
-    while ((0 <= *str && *str <= 9))
-    {
-        nb = (nb * 10) + (*str - 48);
-    }
-    return (nb);
+	while (*str >= '0' && *str <= '9')
+	{
+		nb *= 10;
+		nb += (*str - '0');
+		str++;
+	}
+	return (nb *= sign);
 }
-
-
-
