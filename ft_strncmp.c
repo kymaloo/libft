@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trgaspar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 19:56:25 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/17 19:56:31 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/10/25 16:41:25 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*s1_cast;
+	unsigned char	*s2_cast;
 
+	s1_cast = (unsigned char *)s1;
+	s2_cast = (unsigned char *)s2;
 	i = 0;
-	if (n == 0)
-		return (0);
-	while ((*s1 == *s2) && (*s1 && *s2) && (i < n - 1))
-	{
+	while (s1_cast[i] == s2_cast[i] && s1_cast[i] && s2_cast[i] && i < n)
 		i++;
-		s1++;
-		s2++;
-	}
-	return (*s1 - *s2);
+	if (n == i)
+		return (0);
+	return (s1_cast[i] - s2_cast[i]);
 }
 /*
 int	main(void)

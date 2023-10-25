@@ -6,32 +6,43 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:52:38 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/19 13:59:43 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/10/25 13:30:59 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char * ft_strnstr(const char * src, const char * search, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-    size_t  i;
-    size_t  j;
+	int		i;
+	int		j;
+	int		k;
+	size_t	t;
 
-    i = 0;
-    j = 0;
-    if (n == 0)
-        return (0);
-    if (*search == '\0')
-		return (src);
-    while(ft_strncmp(src, search, n) != 0)
-    {
-        
-    }
-    return (src);
+	i = 0;
+	j = 0;
+	if (ft_strlen(little) == 0)
+		return ((char *)big);
+	while (big[i] != '\0' && len-- > 0)
+	{
+		if (big[i++] == little[j])
+		{
+			k = i - 1;
+			t = len + 2;
+			while (little[j] != 0 && --t > 0)
+				if (little[j++] != big[k++])
+					k = 0;
+			if (k && little[j] == 0)
+				return ((char *)&big[i - 1]);
+			j = 0;
+		}
+	}
+	return (NULL);
 }
-
+/*
 int	main(void)
 {
     printf("%s", strnstr("Hisashi Buri Dana Mugiwara", "Buri", 2));
 	//printf("%s", ft_strnstr("Hisashi Buri Dana Mugiwara", "Buri", 2));
 }
+*/
