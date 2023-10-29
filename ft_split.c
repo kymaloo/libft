@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:05:59 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/29 12:12:01 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/10/29 12:33:21 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,15 +74,15 @@ char	**ft_split(char const *s, char c)
 		s += len;
 		i++;
 	}
+	tab[i] = '\0';
 	return (tab);
 }
 
 /*
 int	main(void)
 {
-	char	s[] = "test pas test bleu ahhhhh";
-	char	c = "t";
-	
+	ft_split("      split       this for   me  !       ", ' ');
+
 	
 }
 */
