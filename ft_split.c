@@ -6,60 +6,83 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:05:59 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/27 11:02:39 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/10/29 12:12:01 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_word(char const *str, char c)
+int	ft_count_word(char const *str, char c)
 {
 	int	i;
-	int	nb_word;
 
 	i = 0;
-	nb_word = 0;
-
 	while (*str)
 	{
-		if (*str != c && nb_word == 0)
-		{
-			nb_word = 1;
+		while (*str == c)
+			str++;
+		if (*str != c && *str)
 			i++;
-		}
-		else if
-			nb_word = 0;
-		str++;
+		while (*str != c && *str)
+			str++;
 	}
 	return (i);
 }
 
-char	*ft_fake_strdup(char *str, int	start, int	finish)
+char	*ft_free_all(char **tab, int i)
 {
-	char	*word;
-	int		i;
-
-	i = 0;
-	word = malloc(sizeof(char) * (finsih - star + 1));
-	while (start < finish)
+	while (tab[i] && i >= 0)
 	{
-		word[i] == str[start];
-		i++;
-		start++;	
+		free(tab[i]);
+		i--;
 	}
-	word[i] == '\0';
-	return (word);
+	free(tab);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
+	int		i;
+	int		len;
 	char	**tab;
-	
-	tab = malloc(sizeof(char *) * (count_word(s, c) + 1));
-	if (!tab || !c)
-		return (NULL);
+	int		nb_word;
+
 	i = 0;
-	j = 0;
+	if (!s)
+		return (NULL);
+	if (!*s)
+	{
+		tab = malloc(1 * sizeof(char *));
+		*tab = 0;
+		return (tab);
+	}
+	nb_word = ft_count_word(s, c);
+	tab = malloc(sizeof(char *) * (nb_word + 1));
+	if (!tab)
+		return (NULL);
+	while (i < nb_word)
+	{
+		while (*s && *s == c)
+			s++;
+		if (ft_strchr(s, c))
+			len = ft_strchr(s, c) - s;
+		else
+			len = ft_strlen(s);
+		tab[i] = ft_substr(s, 0, len);
+		if (!tab[i])
+			ft_free_all(tab, i);
+		s += len;
+		i++;
+	}
+	return (tab);
 }
+
+/*
+int	main(void)
+{
+	char	s[] = "test pas test bleu ahhhhh";
+	char	c = "t";
+	
+	
+}
+*/
