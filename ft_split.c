@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:05:59 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/30 14:00:22 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/10/30 22:46:05 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,12 @@ char	**ft_split(char const *s, char c)
 /*
 int	main(void)
 {
-	char	**tab = ft_split("xxxxxxxxhello!", 'x');
-	for (int i = 0; tab[i]; i++)
+	int	i = 0;
+	char	**tab = ft_split("fffd  fd d  d  dfdfdfdfd  df dfdf d ", ' ');
+	while (*(tab + i))
+	{
 		printf("%s\n", tab[i]);
-}*/
+		i++;
+	}
+}
+*/
