@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:55:51 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/31 15:52:14 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/01 16:18:19 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_itoa(int n)
 	char	*str;
 	long	tmp;
 	int		ten;
-	
+
 	tmp = n;
 	sign = 0;
 	if (tmp < 0)
@@ -53,11 +53,11 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	int	bleu;
-	
-// 	bleu = -2147483648;
-// 	printf("%s\n", ft_itoa(bleu));
-// }
+/*
+int	main(void)
+{
+	int	bleu;
+	bleu = -2147483648;
+	printf("%s\n", ft_itoa(bleu));
+}
+*/

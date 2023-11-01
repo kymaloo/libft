@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:05:59 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/30 22:46:05 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/01 15:09:49 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,33 +39,32 @@ static char	**ft_free_all(char **tab, int i)
 
 char	**ft_split(char const *s, char c)
 {
-	int jsp[3];
-	//int		i;
-	//int		len;
+	int		i;
+	int		len;
 	char	**tab;
-	//int		nb_word;
+	int		nb_word;
 
-	jsp[0] = 0;
+	i = 0;
 	if (!s)
 		return (NULL);
-	jsp[2] = ft_count_word(s, c);
-	tab = malloc(sizeof(char *) * (jsp[2] + 1));
+	nb_word = ft_count_word(s, c);
+	tab = malloc(sizeof(char *) * (nb_word + 1));
 	if (!tab)
 		return (NULL);
-	while (jsp[0] < jsp[2])
+	while (i < nb_word)
 	{
 		while (*s && *s == c)
 			s++;
 		if (ft_strchr(s, c))
-			jsp[1] = ft_strchr(s, c) - s;
+			len = ft_strchr(s, c) - s;
 		else
-			jsp[1] = ft_strlen(s);
-		tab[jsp[0]] = ft_substr(s, 0, jsp[1]);
-		if (!tab[jsp[0]++])
-			return (ft_free_all(tab, jsp[0] - 1));
-		s += jsp[1];
+			len = ft_strlen(s);
+		tab[i] = ft_substr(s, 0, len);
+		if (!tab[i++])
+			return (ft_free_all(tab, i - 1));
+		s += len;
 	}
-	tab[jsp[0]] = '\0';
+	tab[i] = '\0';
 	return (tab);
 }
 
