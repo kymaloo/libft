@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:52:38 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/11/07 23:23:01 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/08 18:54:46 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,28 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		i;
-	int		j;
+	int		i_j[2];
 	int		k;
 	size_t	t;
 
-	i = 0;
-	j = 0;
+	i_j[0] = 0;
+	i_j[1] = 0;
+	if ((!big || !little) && len == 0)
+		return (0);
 	if (ft_strlen(little) == 0)
 		return ((char *)big);
-	while (big[i] != '\0' && len-- > 0)
+	while (big[i_j[0]] != '\0' && len-- > 0)
 	{
-		if (big[i++] == little[j])
+		if (big[i_j[0]++] == little[i_j[1]])
 		{
-			k = i - 1;
+			k = i_j[0] - 1;
 			t = len + 2;
-			while (little[j] != 0 && --t > 0)
-				if (little[j++] != big[k++])
+			while (little[i_j[1]] != 0 && --t > 0)
+				if (little[i_j[1]++] != big[k++])
 					k = 0;
-			if (k && little[j] == 0)
-				return ((char *)&big[i - 1]);
-			j = 0;
+			if (k && little[i_j[1]] == 0)
+				return ((char *)&big[i_j[0] - 1]);
+			i_j[1] = 0;
 		}
 	}
 	return (NULL);
