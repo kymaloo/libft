@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trgaspar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:57:19 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/16 21:01:17 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/07 23:27:18 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,3 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
-/*
-int	main(void)
-{
-	printf("%c\n", tolower('/'));
-	printf("%c", ft_tolower('/'));
-}
-*/

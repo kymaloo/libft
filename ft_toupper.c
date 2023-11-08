@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trgaspar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:49:37 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/16 20:55:58 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/07 23:28:03 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,3 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-
-/*
-int	main(void)
-{
-	printf("%c\n", toupper('*'));
-	printf("%c", ft_toupper('*'));
-}
-*/

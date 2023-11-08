@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 18:28:21 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/25 16:45:09 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/07 23:23:04 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,3 @@ char
 	}
 	return (NULL);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", strrchr("test", '\0'));
-	printf("%s", ft_strrchr("test", '\0'));
-}
-*/

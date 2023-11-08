@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:05:49 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/25 16:35:10 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/07 23:22:11 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,3 @@ void	*ft_memmove(void *dest, const void	*src, size_t n)
 		ft_memcpy(dest1, src1, n);
 	return (dest);
 }
-/*
-int	main(void)
-{
-	char	src[] = "Lalolilolu";
-	char	dest[] = "BleuRougeVert";
-    char	src1[] = "Lalolilolu";
-	char	dest1[] = "BleuRougeVert";
-
-	printf("Avant %s\n", src);
-	memmove(dest, src, 5);
-	printf("Apres %s\n", src);
-
-	printf("Avant %s\n", src1);
-	ft_memmove(dest1, src1, 5);
-	printf("Apres %s\n", src1);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:56:03 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/25 16:45:22 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/07 23:23:44 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", (char *)memchr("test", 's', 5));
-	printf("%s", (char *)ft_memchr("test", 's', 5));
-}
-*/

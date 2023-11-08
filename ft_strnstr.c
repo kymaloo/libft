@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:52:38 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/25 13:30:59 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/07 23:23:01 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/*
-int	main(void)
-{
-    printf("%s", strnstr("Hisashi Buri Dana Mugiwara", "Buri", 2));
-	//printf("%s", ft_strnstr("Hisashi Buri Dana Mugiwara", "Buri", 2));
-}
-*/

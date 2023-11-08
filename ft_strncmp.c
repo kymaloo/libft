@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 19:56:25 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/25 16:41:25 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/07 23:22:56 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	return (s1_cast[i] - s2_cast[i]);
 }
-/*
-int	main(void)
-{
-	int	stop;
-	char	array[] = "hhhhkk";
-	char	array1[] = "hhhh";
-	char	array2[] = "hhhhkk";
-	char	array3[] = "hhhh";
-
-	stop = 5;
-
-	printf("%d\n", ft_strncmp(array, array1, stop));
-	printf("%d", strncmp(array2, array3, stop));
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 17:22:15 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/19 12:26:21 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/07 23:21:26 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	printf("%d\n", isascii(128));
-	printf("%d", ft_isascii(128));
-}
-*/

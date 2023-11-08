@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:05:59 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/11/01 15:09:49 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/08 14:28:33 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,44 +39,29 @@ static char	**ft_free_all(char **tab, int i)
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		len;
+	int		i_len_nbword[3];
 	char	**tab;
-	int		nb_word;
 
-	i = 0;
 	if (!s)
 		return (NULL);
-	nb_word = ft_count_word(s, c);
-	tab = malloc(sizeof(char *) * (nb_word + 1));
+	i_len_nbword[0] = 0;
+	i_len_nbword[2] = ft_count_word(s, c);
+	tab = malloc(sizeof(char *) * (i_len_nbword[2] + 1));
 	if (!tab)
 		return (NULL);
-	while (i < nb_word)
+	while (i_len_nbword[0] < i_len_nbword[2])
 	{
 		while (*s && *s == c)
 			s++;
 		if (ft_strchr(s, c))
-			len = ft_strchr(s, c) - s;
+			i_len_nbword[1] = ft_strchr(s, c) - s;
 		else
-			len = ft_strlen(s);
-		tab[i] = ft_substr(s, 0, len);
-		if (!tab[i++])
-			return (ft_free_all(tab, i - 1));
-		s += len;
+			i_len_nbword[1] = ft_strlen(s);
+		tab[i_len_nbword[0]] = ft_substr(s, 0, i_len_nbword[1]);
+		if (!tab[i_len_nbword[0]++])
+			return (ft_free_all(tab, i_len_nbword[0] - 1));
+		s += i_len_nbword[1];
 	}
-	tab[i] = '\0';
+	tab[i_len_nbword[0]] = 0;
 	return (tab);
 }
-
-/*
-int	main(void)
-{
-	int	i = 0;
-	char	**tab = ft_split("fffd  fd d  d  dfdfdfdfd  df dfdf d ", ' ');
-	while (*(tab + i))
-	{
-		printf("%s\n", tab[i]);
-		i++;
-	}
-}
-*/

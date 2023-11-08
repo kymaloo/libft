@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trgaspar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:23:05 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/17 13:20:17 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/07 23:26:55 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-/*
-int	main(void)
-{
-	char	str[] = "asasasasasasasasas";
-	char	str1[] = "asasasasasasasasas";
-
-	printf("Avant %s\n", str);
-	memset(str, '*', 5);
-	printf("Apres %s\n", str);
-
-	printf("Avant %s\n", str1);
-	ft_memset(str1, '*', 5);
-	printf("Apres %s\n", str1);
-}
-*/

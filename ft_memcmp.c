@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:14:28 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/10/19 12:21:28 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/07 23:22:04 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	int	stop;
-	char	array[] = "hhhhkk";
-	char	array1[] = "hhhh";
-	char	array2[] = "hhhhkk";
-	char	array3[] = "hhhh";
-
-	stop = 5;
-
-	printf("%d\n", memcmp(array, array1, stop));
-	printf("%d", ft_memcmp(array2, array3, stop));
-}
-*/
