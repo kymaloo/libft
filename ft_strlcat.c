@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:28:10 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/11/08 18:51:32 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/09 22:39:30 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
-	if ((!dst || !src) && size == 0)
-		return (0);
 	while (dst[i] && i < size)
 		i++;
 	while (src[j] && (i + j + 1) < size)

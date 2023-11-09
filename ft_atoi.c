@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 14:00:48 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/11/07 23:14:20 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/09 22:26:57 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,8 @@ int	ft_atoi(const char *nptr)
 	}
 	while (*nptr >= '0' && *nptr <= '9')
 	{
-		nb *= 10;
-		nb += (*nptr - '0');
+		nb = (nb * 10) + (*nptr - '0');
 		nptr++;
 	}
-	return (nb *= sign);
+	return (nb * sign);
 }

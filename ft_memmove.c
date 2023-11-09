@@ -6,13 +6,13 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:05:49 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/11/07 23:22:11 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/09 22:41:04 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void	*src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*dest1;
 	unsigned char	*src1;

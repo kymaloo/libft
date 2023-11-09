@@ -6,17 +6,15 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 13:10:36 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/11/08 00:22:46 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:32:37 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <limits.h>
 
 typedef struct s_list
 {

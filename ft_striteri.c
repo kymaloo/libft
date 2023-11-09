@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:36:02 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/11/08 00:20:09 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/09 22:34:35 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	if (!s || !f)
 		return ;
 	i = 0;
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		f(i, s + i);
 		i++;
