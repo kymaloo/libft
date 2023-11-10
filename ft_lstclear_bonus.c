@@ -6,7 +6,7 @@
 /*   By: trgaspar <trgaspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:12:26 by trgaspar          #+#    #+#             */
-/*   Updated: 2023/11/08 00:18:18 by trgaspar         ###   ########.fr       */
+/*   Updated: 2023/11/10 15:07:47 by trgaspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*tmp;
 	t_list	*tmp2;
 
-	if (!lst || !del)
+	if (!lst)
 		return ;
 	tmp = *lst;
 	while (tmp)
